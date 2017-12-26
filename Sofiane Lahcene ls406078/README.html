@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Sofiane Lahcene">
+	<META NAME="CREATED" CONTENT="20171225;23353735">
+	<META NAME="CHANGEDBY" CONTENT="Sofiane Lahcene">
+	<META NAME="CHANGED" CONTENT="20171226;3022239">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=6>			<U><B>Projet Tower
+Defense C++</B></U></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=6><FONT SIZE=5 STYLE="font-size: 20pt"><U><B>Choix
+			de conception&nbsp;:</B></U></FONT></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Pour ce projet de tower
+defense, nous avons choisi de faire un jeu simple en respectant les
+contraintes.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Ainsi, nous avons fait des
+classes pour la plupart sans h&eacute;ritages ou interfaces, &agrave;
+part les classes MyGameEngine, MyGraphicEngine, MyControlEngine qui
+h&eacute;ritent des classes de la librairie propos&eacute;e.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Nous avons les classes Vaisseau
+et Missile, qui sont pr&eacute;sentes en tant que std::vector&lt;classe&gt;
+et parcourues pour activer leur m&eacute;thode draw() et move()</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">Nous avons d&eacute;cid&eacute;
+d'utiliser un tableau de std::vector d'ast&eacute;ro&iuml;des pour
+que la collision ne soit v&eacute;rifi&eacute;e que pour les
+ast&eacute;ro&iuml;des qui sont dans la m&ecirc;me rang&eacute;e que
+les missiles, diminuant ainsi le nombre d'it&eacute;rations dans
+l'engine.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">Cela prend plus de m&eacute;moire
+mais est plus rapide.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Nous avons aussi d&eacute;cid&eacute;
+de cr&eacute;er un tableau de bool&eacute;ens pour g&eacute;rer les
+cases de la grille, s'assurer qu'une tour ne peut pas &ecirc;tre
+plac&eacute;e l&agrave; o&ugrave; il y en a d&eacute;j&agrave; une.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Le nombre de fonctions et de
+classes est faible, cela est d&ucirc; &agrave; la simplicit&eacute;
+du notre tower defense. Si l'on devait ajouter du contenu, </FONT>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Il y a trois tours et trois
+ast&eacute;ro&iuml;des ayant des valeurs diff&eacute;rentes.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	Toutes les 5 vagues, un nouveau
+type d'ast&eacute;ro&iuml;de plus puissant appara&icirc;t.</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal; text-decoration: none">
+<FONT SIZE=4 STYLE="font-size: 15pt">	N'ayant que trois types
+d'ast&eacute;ro&iuml;de et pour garder une coh&eacute;rence avec
+l'affichage graphique, une fois la 15&egrave;me vague termin&eacute;e
+le jeu s'arr&ecirc;te et le joueur gagne.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+			</P>
+			<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+			</P>
+			<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+			</P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+<BR>
+</P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+			<FONT SIZE=6><FONT SIZE=5 STYLE="font-size: 20pt"><U><B>Comment
+			utiliser le programme&nbsp;:</B></U></FONT></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<FONT SIZE=6><FONT SIZE=5 STYLE="font-size: 20pt">	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Pour
+utiliser ce programme, double cliquez sur le .sln, ex&eacute;cutez
+dans visual studio.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<FONT SIZE=6><FONT SIZE=4 STYLE="font-size: 16pt">	Cliquez une fois
+sur un des triangles (vert/rouge/bleu) en bas pour s&eacute;l&eacute;ctionner
+une tour, et cliquez dans un espace libre de la grille pour placer
+cette tour. Pour annuler votre s&eacute;lection, cliquez n'importe o&ugrave;
+sauf dans la grille.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<FONT SIZE=6><FONT SIZE=4 STYLE="font-size: 16pt">	Pour lancer la
+prochaine vague, appuyez sur la touche &laquo;&nbsp;W&nbsp;&raquo;.
+Il faut attendre la fin de la vague pour lancer la prochaine.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; text-decoration: none">
+<FONT SIZE=6><FONT SIZE=4 STYLE="font-size: 16pt">	Les vaisseaux
+peuvent &ecirc;tre plac&eacute;s n'importe quand, m&ecirc;me pendant
+une vague, ils ont cependant un temps de recharge avant de pouvoir
+envoyer un missile.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=6><FONT SIZE=5 STYLE="font-size: 20pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: normal">	</SPAN></SPAN></SPAN></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: normal">Astuce&nbsp;:
+l'argent est tr&egrave;s limit&eacute;, acheter une tour ch&egrave;re
+doit &ecirc;tre fait avec pr&eacute;caution, elle peut &ecirc;tre
+d'une grande utilit&eacute; face &agrave; plusieurs ast&eacute;ro&iuml;des
+puissants arrivant sur une m&ecirc;me ligne, mais peut faire perdre
+les autres lignes d&ucirc; au manque d'argent.</SPAN></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=6><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: normal">Pour
+plus de facilit&eacute;, mettez une tour verte sur la premi&egrave;re
+case de gauche de chaque ligne avant de lancer la vague.</SPAN></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>
